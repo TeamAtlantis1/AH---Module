@@ -4,4 +4,4 @@
   The module will display a Google Map image with the displayed area containing the address of the listed home, along with an outline of a particular radius around the person's address. 
   
   An Example:
-  ![alt text](https://postimg.cc/w3R4RHhL)
+  ![MapScreenShot](https://imgur.com/a/p01XYD9)
