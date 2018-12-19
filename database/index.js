@@ -17,11 +17,14 @@ Per Record:
 */
 //Have to look up the types of each type 
 
-let repoSchema = mongoose.Schema({
-  url: {type: String, unique: true},
-  user: String,
-  stars: Number,
-  name: String
+let listingSchema = mongoose.Schema({
+  photo: String,
+  room_type: String,
+  Privacy: String,
+  Price: Number,
+  Review_count: Number,
+  Average_rating: Number,
+  Related_homes: [Number]
 });
 
-let Repo = mongoose.model('Repo', repoSchema);
+let Repo = mongoose.model('Repo', listingSchema);
