@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const db = require('./connection').db;
 //mongoose.connect('mongodb://localhost/fetcher');
 
 /*
@@ -27,6 +28,11 @@ let listingSchema = mongoose.Schema({
   property_type: String,
 });
 
+
 let Listing = mongoose.model('Listing', listingSchema);
- 
+
+const retrieve = () => {
+  return Listing.find({}).exec();
+}
 module.exports.Listing = Listing;
+module.exports.retrieve = retrieve;
