@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var mongoUri = 'mongodb://localhost/listing';
+var mongoUri = 'mongodb://localhost/listings';
 
 // Connect Mongoose to our local MongoDB via URI specified above and export it below
 mongoose.connect(mongoUri);
