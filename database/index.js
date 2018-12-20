@@ -18,12 +18,13 @@ Per Record:
 //Have to look up the types of each type 
 
 let listingSchema = mongoose.Schema({
-  photo: String,
-  property_type: String,
+  // listing_id: Number,
+  // photo: String,
+  // property_type: String,
+  // related_homes: [Number]
   price: Number,
   review_count: Number,
   average_rating: Number,
-  related_homes: [Number]
 });
 
 let Listing = mongoose.model('Listing', listingSchema);
@@ -38,3 +39,5 @@ const assignPhoto = function(){
   return Math.floor(20 * Math.random() + 1);
 }
 //Related homes I have to hardcode randomly
+
+module.exports.Listing = Listing;
