@@ -26,7 +26,7 @@ let listingSchema = mongoose.Schema({
   related_homes: [Number]
 });
 
-let Repo = mongoose.model('Repo', listingSchema);
+let Listing = mongoose.model('Listing', listingSchema);
 
 const assignProperty = function(){
   var types = ['PRIVATE ROOM IN APARTMENT', 'ENTIRE APARTMENT', 'PRIVATE ROOM IN CONDOMINIUM', 'SHARED ROOM IN APARTMENT', 
