@@ -19,12 +19,22 @@ Per Record:
 
 let listingSchema = mongoose.Schema({
   photo: String,
-  room_type: String,
-  Privacy: String,
-  Price: Number,
-  Review_count: Number,
-  Average_rating: Number,
-  Related_homes: [Number]
+  property_type: String,
+  price: Number,
+  review_count: Number,
+  average_rating: Number,
+  related_homes: [Number]
 });
 
 let Repo = mongoose.model('Repo', listingSchema);
+
+const assignProperty = function(){
+  var types = ['PRIVATE ROOM IN APARTMENT', 'ENTIRE APARTMENT', 'PRIVATE ROOM IN CONDOMINIUM', 'SHARED ROOM IN APARTMENT', 
+    'ENTIRE GUEST SUITE', 'ENTIRE GUESTHOUSE', 'PRIVATE ROOM IN HOUSE', 'ENTIRE HOUSE']
+  return types[Math.floor(types.length * Math.random())];
+}
+
+const assignPhoto = function(){
+  return Math.floor(20 * Math.random() + 1);
+}
+//Related homes I have to hardcode randomly
