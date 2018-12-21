@@ -31,8 +31,13 @@ let listingSchema = mongoose.Schema({
 
 let Listing = mongoose.model('Listing', listingSchema);
 
-const retrieve = () => {
+const retrieveAll = () => {
   return Listing.find({}).exec();
 }
+
+const retrieveOne = (id) => {
+  return Listing.find({listing_id: id}).exec();
+};
 module.exports.Listing = Listing;
-module.exports.retrieve = retrieve;
+module.exports.retrieveAll = retrieveAll;
+module.exports.retrieveOne = retrieveOne;
